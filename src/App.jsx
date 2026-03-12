@@ -9,9 +9,14 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    console.log('Attempting login with:', username);
+    console.log('Expected username:', import.meta.env.VITE_LOGIN_USERNAME);
+
     if (username === import.meta.env.VITE_LOGIN_USERNAME && password === import.meta.env.VITE_LOGIN_PASSWORD) {
+      console.log('Login successful');
       setIsAuthenticated(true);
     } else {
+      console.log('Login failed: Credentials mismatch');
       setError('Invalid username or password');
     }
   };
