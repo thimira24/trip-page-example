@@ -1,0 +1,135 @@
+.itinerary-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    margin-bottom: 24px;
+}
+
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.accordion-item {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: #fcfcfc;
+}
+
+.acc-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.acc-day {
+    color: #ee2e24;
+    font-weight: 600;
+}
+
+.acc-separator {
+    color: #999;
+}
+
+.acc-title {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.acc-icon {
+    color: #666;
+}
+
+.accordion-content {
+    padding: 0 20px 24px;
+    border-top: 1px solid #eaeaea;
+}
+
+.acc-meta-grid {
+    display: flex;
+    gap: 48px;
+    padding: 16px 0;
+    margin-top: 8px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.meta-icon {
+    color: #444;
+    margin-top: 2px;
+}
+
+.meta-text {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 13px;
+    gap: 4px;
+}
+
+.meta-text strong {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.acc-desc {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.acc-desc:last-of-type {
+    margin-bottom: 0;
+}
+
+.itinerary-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f6f6f6;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+.itinerary-footer a {
+    color: #0b5cff;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .acc-meta-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

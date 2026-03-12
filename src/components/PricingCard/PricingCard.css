@@ -1,0 +1,232 @@
+.pricing-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 60px;
+}
+
+.pricing-header {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+/* Sidebar Date Filter */
+.sidebar-calendar-wrapper {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.sidebar-date-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sidebar-date-input:hover {
+    border-color: #888;
+}
+
+.sidebar-date-input.active {
+    border-color: #222;
+    box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.1);
+}
+
+.sidebar-date-icon {
+    color: #666;
+    flex-shrink: 0;
+}
+
+.sidebar-date-text {
+    flex: 1;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.sidebar-date-text.placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.sidebar-date-clear {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.sidebar-date-clear:hover {
+    color: #333;
+    background-color: #eee;
+}
+
+.sidebar-calendar-popover {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 200;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    animation: sidebarCalFadeIn 0.2s ease-out;
+}
+
+@keyframes sidebarCalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidebar-calendar-popover .rdrCalendarWrapper {
+    font-size: 12px;
+}
+
+.sidebar-calendar-popover .rdrMonth {
+    width: 260px;
+}
+
+.sidebar-dep-empty {
+    text-align: center;
+    padding: 16px;
+    color: #888;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Departures List */
+.departures-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.departure-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.departure-item:hover {
+    border-color: #999;
+    background-color: #f6f6f6;
+}
+
+.departure-item.clickable {
+    cursor: pointer;
+}
+
+.departure-item.clickable:active {
+    background-color: #eeeeee;
+}
+
+.dep-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dep-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.dep-status {
+    font-size: 12px;
+}
+
+.status-gray {
+    color: #666;
+}
+
+.status-red {
+    color: #ee2e24;
+}
+
+.dep-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dep-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.pricing-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #d0d0d0;
+}
+
+.btn-secondary:hover {
+    background-color: #f9f9f9;
+}
+
+.btn-icon {
+    margin-right: 8px;
+}

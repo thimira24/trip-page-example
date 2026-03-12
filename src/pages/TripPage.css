@@ -1,0 +1,38 @@
+.trip-page-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-main-block {
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+.trip-main-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 32px 64px;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 32px;
+}
+
+.trip-left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 960px) {
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+.breadcrumb-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: #555;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #888;
+}
+
+.breadcrumb-current {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Share & Wishlist Actions */
+.breadcrumb-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 1px solid #d0d0d0;
+    border-radius: 24px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.breadcrumb-action-btn:hover {
+    background-color: #f4f4f4;
+    border-color: #999;
+}
+
+.breadcrumb-action-btn svg {
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .breadcrumb-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
