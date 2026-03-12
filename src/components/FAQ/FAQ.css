@@ -44,7 +44,7 @@
 
 .faq-tab.active {
     color: #1a1a1a;
-    border-bottom-color: #E8002D;
+    border-bottom-color: #1a1a1a;
 }
 
 /* ── FAQ List ── */
@@ -58,13 +58,13 @@
     border: 1px solid #eaeaea;
     border-radius: 10px;
     overflow: hidden;
-    border-left: 3px solid transparent;
+    border-left: 1px solid #eaeaea;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .faq-item.expanded {
-    border-left-color: #E8002D;
-    box-shadow: 0 2px 12px rgba(232, 0, 45, 0.06);
+    border-left-color: #1a1a1a;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* ── FAQ Header ── */
@@ -102,7 +102,7 @@
 
 .faq-icon.rotated {
     transform: rotate(180deg);
-    color: #E8002D;
+    color: #1a1a1a;
 }
 
 /* ── FAQ Answer with smooth animation ── */

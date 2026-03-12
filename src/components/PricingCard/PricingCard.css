@@ -81,14 +81,15 @@
 
 .sidebar-calendar-popover {
     position: absolute;
-    top: calc(100% + 6px);
+    top: calc(100% + 12px);
     right: 0;
     z-index: 200;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    padding: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    padding: 16px;
+    min-width: 600px;
     animation: sidebarCalFadeIn 0.2s ease-out;
 }
 

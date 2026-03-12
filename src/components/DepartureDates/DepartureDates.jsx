@@ -74,7 +74,8 @@ const DepartureDates = () => {
                         <div className="calendar-popover" ref={calendarRef}>
                             <DateRange editableDateInputs={false} onChange={item => setDateRange([item.selection])} moveRangeOnFirstSelection={false}
                                 ranges={dateRange[0].startDate ? dateRange : [{ startDate: new Date(), endDate: new Date(), key: 'selection' }]}
-                                months={2} direction="horizontal" rangeColors={['#222222']} showDateDisplay={false} />
+                                months={2} direction="horizontal" rangeColors={['#222222']} showDateDisplay={false}
+                                staticRanges={[]} inputRanges={[]} />
                         </div>
                     )}
                 </div>

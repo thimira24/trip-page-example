@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Send, Facebook, Instagram, Twitter, Youtube, Linkedin, ToggleLeft } from 'lucide-react';
 import logo from '../../../images/Logo.png';
+import bcorpLogo from '../../../images/BCorp Logo.png';
 
 const Footer = () => {
     return (
@@ -28,8 +29,9 @@ const Footer = () => {
                 {/* Links Section */}
                 <div className="footer-links-wrapper">
                     <div className="footer-brand">
-                        <div className="footer-logo">
+                        <div className="footer-logos">
                             <img src={logo} alt="Intrepid Travel" className="footer-logo-img" />
+                            <img src={bcorpLogo} alt="Certified B Corporation" className="footer-bcorp-img" />
                         </div>
                         <div className="social-links">
                             <a href="#"><Facebook size={18} /></a>
@@ -37,6 +39,24 @@ const Footer = () => {
                             <a href="#"><Twitter size={18} /></a>
                             <a href="#"><Youtube size={18} /></a>
                             <a href="#"><Linkedin size={18} /></a>
+                        </div>
+                        <div className="region-selector">
+                            <select defaultValue="Global">
+                                <option value="Global">Global</option>
+                                <option value="australia">Australia</option>
+                                <option value="belgium">Belgium</option>
+                                <option value="canada">Canada</option>
+                                <option value="europe">Europe</option>
+                                <option value="germany">Germany</option>
+                                <option value="ireland">Ireland</option>
+                                <option value="malta">Malta</option>
+                                <option value="netherlands">Netherlands</option>
+                                <option value="new zeland">New Zealand</option>
+                                <option value="south aftica">South Africa</option>
+                                <option value="switzerland">Switzerland</option>
+                                <option value="united kingdom">United Kingdom</option>
+                                <option value="united states">United States</option>
+                            </select>
                         </div>
                     </div>
 
@@ -91,7 +111,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="footer-bottom">
                     <div className="bottom-links">
-                        <span>© Urban Adventures 2025</span>
+                        <span>© Intrepid Travel 2026</span>
                         <a href="#">Privacy policy</a>
                         <a href="#">Terms</a>
                         <a href="#">Cookie settings</a>

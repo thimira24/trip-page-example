@@ -102,6 +102,13 @@
     margin: 0 0 14px;
 }
 
+.modal-duration {
+    color: #888;
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
 .modal-dates-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

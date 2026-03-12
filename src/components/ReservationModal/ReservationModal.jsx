@@ -29,7 +29,6 @@ const ACCOMMODATION_OPTIONS = [
 
 const ReservationModal = ({ isOpen, onClose, departure }) => {
     const [selectedAccommodation, setSelectedAccommodation] = useState('twin');
-    const [numPlaces, setNumPlaces] = useState(1);
 
     useEffect(() => {
         if (isOpen) {
@@ -43,7 +42,8 @@ const ReservationModal = ({ isOpen, onClose, departure }) => {
     if (!isOpen || !departure) return null;
 
     const startDate = departure.parsedDate;
-    const endDate = addDays(startDate, 7);
+    const endDate = addDays(startDate, 9); // Example: 10 days total (9 days difference)
+    const durationDays = 10;
 
     return (
         <div className="modal-overlay" onClick={onClose}>
@@ -62,7 +62,7 @@ const ReservationModal = ({ isOpen, onClose, departure }) => {
                     <div className="modal-section">
                         <h4 className="modal-section-title">
                             <Calendar size={16} />
-                            Trip dates
+                            Trip dates <span className="modal-duration">({durationDays} days)</span>
                         </h4>
                         <div className="modal-dates-row">
                             <div className="modal-date-field">
@@ -82,17 +82,7 @@ const ReservationModal = ({ isOpen, onClose, departure }) => {
                         </div>
                     </div>
 
-                    <div className="modal-section">
-                        <h4 className="modal-section-title">
-                            <Users size={16} />
-                            Number of places
-                        </h4>
-                        <div className="modal-places-row">
-                            <button className="places-btn" onClick={() => setNumPlaces(Math.max(1, numPlaces - 1))} disabled={numPlaces <= 1}>−</button>
-                            <span className="places-value">{numPlaces}</span>
-                            <button className="places-btn" onClick={() => setNumPlaces(numPlaces + 1)}>+</button>
-                        </div>
-                    </div>
+
 
                     <div className="modal-section">
                         <h4 className="modal-section-title">
@@ -127,7 +117,7 @@ const ReservationModal = ({ isOpen, onClose, departure }) => {
                 </div>
 
                 <div className="modal-footer">
-                    <button className="modal-cta-btn">Let's reserve</button>
+                    <button className="modal-cta-btn">Let&apos;s reserve</button>
                 </div>
             </div>
         </div>

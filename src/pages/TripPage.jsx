@@ -14,6 +14,7 @@ import PricingCard from '../components/PricingCard/PricingCard';
 import USP from '../components/USP/USP';
 import Reviews from '../components/Reviews/Reviews';
 import Footer from '../components/Footer/Footer';
+import DisclaimerBanner from '../components/DisclaimerBanner/DisclaimerBanner';
 import './TripPage.css';
 
 const TripPage = () => {
@@ -62,6 +63,7 @@ const TripPage = () => {
                 <Reviews />
             </div>
             <Footer />
+            <DisclaimerBanner />
         </div>
     );
 };

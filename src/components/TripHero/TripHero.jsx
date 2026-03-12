@@ -46,6 +46,7 @@ const TripHero = () => {
 
     return (
         <div className="trip-hero-card">
+            <h1 className="hero-title">Private Bali&apos;s hidden rice terraces</h1>
             <div className="hero-main-image-container" onClick={() => openLightbox(0)}>
                 <img
                     src={allImages[0].src}
@@ -72,10 +73,7 @@ const TripHero = () => {
                 ))}
             </div>
 
-            <div className="hero-content">
-                <h1 className="hero-title">Private Bali&apos;s hidden rice terraces</h1>
 
-            </div>
 
             {/* Lightbox */}
             {lightboxOpen && (
