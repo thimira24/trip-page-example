@@ -9,7 +9,7 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === 'intrepid' && password === 'qWQPM5vcdpDL1yCEHl6f') {
+    if (username === import.meta.env.VITE_LOGIN_USERNAME && password === import.meta.env.VITE_LOGIN_PASSWORD) {
       setIsAuthenticated(true);
     } else {
       setError('Invalid username or password');
