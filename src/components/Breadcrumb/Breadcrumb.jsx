@@ -15,7 +15,7 @@ const Breadcrumb = () => {
     return (
         <div className="breadcrumb-row">
             <nav className="breadcrumb">
-                <a href="/">Home</a>
+                <a href={import.meta.env.BASE_URL}>Home</a>
                 <ChevronRight size={14} className="breadcrumb-separator" />
                 <a href="#bali">Bali</a>
                 <ChevronRight size={14} className="breadcrumb-separator" />
