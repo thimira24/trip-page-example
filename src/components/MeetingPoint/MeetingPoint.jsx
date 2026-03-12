@@ -17,15 +17,20 @@ const MeetingPoint = () => {
     const endCoords = [115.111, -8.814];
 
     useEffect(() => {
-        if (map.current) return; // initialize map only once
+        if (map.current || !mapboxgl.accessToken) return; // initialize map only once if token exists
 
-        map.current = new mapboxgl.Map({
-            container: mapContainer.current,
-            style: 'mapbox://styles/mapbox/light-v11',
-            center: [115.186, -8.744],
-            zoom: 11,
-            scrollZoom: false
-        });
+        try {
+            map.current = new mapboxgl.Map({
+                container: mapContainer.current,
+                style: 'mapbox://styles/mapbox/light-v11',
+                center: [115.186, -8.744],
+                zoom: 11,
+                scrollZoom: false
+            });
+            // ... rest of map setup ...
+        } catch (error) {
+            console.error('Mapbox initialization failed:', error);
+        }
 
         map.current.on('load', () => {
             // Add Start Marker

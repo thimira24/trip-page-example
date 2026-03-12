@@ -9,14 +9,16 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Attempting login with:', username);
-    console.log('Expected username:', import.meta.env.VITE_LOGIN_USERNAME);
+    const expectedUser = import.meta.env.VITE_LOGIN_USERNAME || 'intrepid';
+    const expectedPass = import.meta.env.VITE_LOGIN_PASSWORD || 'qWQPM5vcdpDL1yCEHl6f';
 
-    if (username === import.meta.env.VITE_LOGIN_USERNAME && password === import.meta.env.VITE_LOGIN_PASSWORD) {
-      console.log('Login successful');
+    if (!import.meta.env.VITE_LOGIN_USERNAME) {
+      console.warn('VITE_LOGIN_USERNAME is not set in environment variables. Falling back to default.');
+    }
+
+    if (username === expectedUser && password === expectedPass) {
       setIsAuthenticated(true);
     } else {
-      console.log('Login failed: Credentials mismatch');
       setError('Invalid username or password');
     }
   };
